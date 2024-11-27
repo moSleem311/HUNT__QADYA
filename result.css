@@ -1,0 +1,128 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #620411); /* خلفية جذابة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container */
+.result-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Congrats */
+.congrats {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffe600;
+}
+
+/* Message */
+.message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Prize Image */
+.prize-container {
+    margin: 20px 0;
+}
+
+.prize-container img {
+    width: 200px;
+    height: auto;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+/* Home Button */
+.home-button {
+    background: #ffe600;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    background: #ffc107;
+}
+
+.home-button:active {
+    transform: scale(0.9);
+    background: #e0a800;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .congrats {
+        font-size: 1.5rem;
+    }
+    .message {
+        font-size: 1rem;
+    }
+    .prize-container img {
+        width: 150px;
+    }
+    .home-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

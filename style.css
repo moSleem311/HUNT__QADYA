@@ -1,0 +1,165 @@
+/* إضافة خلفية للصفحة */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 50px;
+  padding: 50px;
+  background-size: cover; /* لجعل الصورة تغطي الصفحة */
+  color: #333;
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* الحاوية الرئيسية */
+.game-container {
+  max-width: 700px;
+ 
+  background-color: rgba(246, 241, 241, 0.8); /* خلفية شفافة للحاوية */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  border: 5px solid #ad0f0f;
+}
+
+/* العنوان */
+.header {
+  margin-bottom: 0px;
+}
+
+.logo {
+  width: 200px;
+  height: 210px;
+  margin-bottom: -25px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #dd1010;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* قسم الأسئلة */
+.question {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* الأزرار */
+.options {
+  display: grid; /* استخدام شبكة */
+  grid-template-columns: 1fr 1fr; /* تقسيم إلى عمودين */
+  gap: 15px; /* المسافة بين الأزرار */
+}
+
+.option {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ad0f0f, #e50000); /* لون متدرج */
+  border: 2px solid #a00000; /* لون داكن للإطار */
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل للأزرار */
+  transition: all 0.3s ease-in-out; /* انتقال ناعم عند التمرير */
+}
+
+.option:hover {
+  transform: scale(1.05); /* تكبير الزر قليلاً */
+  background: linear-gradient(90deg, #e50000, #ad0f0f); /* عكس التدرج */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التمرير */
+}
+
+.option:active {
+  transform: scale(0.95); /* تصغير الزر عند النقر */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* تأثير ضغط */
+}
+/* الزر المحدد */
+.option.selected {
+  background-color: #ffc107; /* لون أصفر */
+  color: #333; /* لون النص */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+  border-color: #ffc107; /* لون الإطار */
+  transform: scale(1.05); /* تأثير التكبير */
+}
+
+.correct {
+  background: linear-gradient(90deg, #28a745, #4caf50) !important; /* لون متدرج أخضر */
+  color: white;
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5); /* ظل للإجابة الصحيحة */
+}
+
+.wrong {
+  background: linear-gradient(90deg, #ff0202, #f50505) !important; /* لون متدرج أحمر */
+  color: white;
+  box-shadow: 0 6px 15px rgba(255, 87, 51, 0.5); /* ظل للإجابة الخاطئة */
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* زر الفعل */
+.button {
+  padding: 12px 25px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ad0f0f, #e50000); /* لون متدرج */
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل للزر */
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #e50000, #ad0f0f); /* عكس التدرج */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التمرير */
+}
+
+.button:active {
+  transform: scale(0.95); /* تأثير ضغط */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* تأثير داخلي */
+}
+
+/* الزر الخاص بحذف إجابتين */
+#use50Button {
+  background: linear-gradient(90deg, #040300, #020000); /* لون ذهبي متدرج */
+}
+
+#use50Button:hover {
+  background: linear-gradient(90deg, #e80a0a, #ffbf00); /* عكس التدرج */
+}
+
+/* زر الاتصال بصديق */
+#callFriendButton {
+  background: linear-gradient(90deg, #000102, #0056b3); /* لون أزرق متدرج */
+}
+
+#callFriendButton:hover {
+  background: linear-gradient(90deg, #0056b3, #007bff); /* عكس التدرج */
+}
+
+/* زر الانسحاب */
+#exitButton {
+  background: linear-gradient(90deg, #6c757d, #343a40); /* لون رمادي متدرج */
+}
+
+#exitButton:hover {
+  background: linear-gradient(90deg, #343a40, #6c757d); /* عكس التدرج */
+}

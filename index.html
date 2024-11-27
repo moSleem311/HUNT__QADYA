@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunt Qadya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <img src="logo.png" alt="قاضيه" class="logo">
+      <h1>HUNT QADYA</h1>
+    </div>
+    <div id="question" class="question"></div>
+    <div class="options">
+      <button class="option" id="option1"></button>
+      <button class="option" id="option2"></button>
+      <button class="option" id="option3"></button>
+      <button class="option" id="option4"></button>
+    </div>
+    <button id="checkAnswerBtn" class="button"> اجابة</button>
+
+    <div id="resultMessage" class="result-message"></div>
+
+    <div class="controls">
+      <button id="use50Button" class="button">حذف إجابتين</button>
+      <button id="callFriendButton" class="button">مساعدة خارجيه</button>
+      <button id="exitButton" class="button"> انسحب </button>
+    </div>
+    
+    <div class="status">
+      <p>احنا ف السؤال رقم: <span id="stage">1</span></p>
+      <p>جاوبت كام واحده صح: <span id="amount">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
